@@ -1,212 +1,182 @@
 <!DOCTYPE html>
-<meta name="viewport">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description"content="A junior developer portfolio, based in South West England. John Haigh.">
 <title>John Haigh - Portfolio</title>
-<html>
-    <!-- Glide JS Required Core JS -->
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>  
-<header>
-    <link rel="stylesheet" href="static/styles.css">
-    <!-- Glide JS Required Core stylesheet -->
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<html lang="en">
+    <header>
+        <!-- Glide JS Required Core JS -->
+        <script src="static/glide/glide.min.js"></script>  
+        <link rel="stylesheet" href="static/css/styles.css">
+        <link rel="stylesheet" href="static/glide/glide.core.min.css">
+        <link rel="stylesheet" href="static/glide/glide.theme.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    </header>
+    <body>
+        <div class="topnav">
+            <h2>John Haigh</h2>
+            <p>Junior Developer Portfolio</p>
+        </div>
+            <div class="slidenav">
+                <script>
+                    var before = document.querySelector('#options-peek-before')
+                    var after = document.querySelector('#options-peek-after')
 
+                    var glide = new Glide('.glide') {
+                    startAt: 3,
+                    perView: 3,
+                    animationDuration: 1000;
+                    peek: { before: 100, after: 50 }
+                    })
 
-</header>
-<body>
-    <div class="topnav">
-        <h2>John Haigh</h2>
-        <p>Junior Developer Portfolio</p>
-    </div>
-        <div class="slidenav">
-            <script>
-                var before = document.querySelector('#options-peek-before')
-                var after = document.querySelector('#options-peek-after')
-
-                var glide = new Glide('.glide') {
-                startAt: 3,
-                perView: 3,
-                animationDuration: 1000;
-                peek: { before: 100, after: 50 }
-                })
-
-                function peek () {
-                glide.update({
-                    peek: {
-                    before: before.value,
-                    after: after.value
+                    function peek () {
+                    glide.update({
+                        peek: {
+                        before: before.value,
+                        after: after.value
+                        }
+                    })
                     }
-                })
-                }
 
-                before.addEventListener('input', peek)
-                after.addEventListener('input', peek)
+                    before.addEventListener('input', peek)
+                    after.addEventListener('input', peek)
 
-                glide.mount()
-            </script>
-            <div class="glide multi">
-                <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides">
-                        <li class="glide__slide">                                
-                            <div class="slider_container">
-                                <p>hi</p>
-                            </div>
-                        </li>
-                        <li class="glide__slide">                                
-                            <div class="slider_container">
-                                <div class="container_left">
-                                    <img src="images/Onboard_Screengrab.png">
-                                    <div style="display: flex">
-                                        <a class="button_light" target="_blank" rel="noreferrer" href="https://onboardteam.herokuapp.com">Visit Live</a>
-                                        <a class="button_light" target="_blank" rel="noreferrer" href="https://github.com/johnchaigh/onboard">View Code</a>
+                    glide.mount()
+                </script>
+                <div class="glide multi">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">                                
+                                <div class="slider_container">
+                                    <div class="container_left">
+                                        <img alt="Onboard screengrab" src="images/onboard_screengrab.png">
+                                        <div style="display: flex">
+                                            <a class="button_light" target="_blank" rel="noreferrer" href="https://onboardteam.herokuapp.com">Visit Live</a>
+                                            <a class="button_light" target="_blank" rel="noreferrer" href="https://github.com/johnchaigh/onboard">View Code</a>
+                                        </div>
+                                    </div>
+                                    <div class="container_right">
+                                        <div class="project_text">
+                                            <h3>Onboard</h3>
+                                                <p>
+                                                    Designed and built in collaboration with a large financial services business, Onboard is a powerful web application for the better training and tracking of new employees.
+                                                    It was built to modernise their outdated, spreadsheet driven enrollment processes and allow senior managers better visibility across the whole workforce. All this data is brought together to make predictions on the success of a particular individual, their graduation date and where they sit in relation to their peers.
+                                                    <br>
+                                                    <br>
+                                                    Built in Python on the Flask Framework, Onboard uses a SQLite3 database to manage logins performance tracking across multiple tiers and all the pathway data associated.
+                                                </p>
+                                                <p><sub>Python | SQLite3 | Flask | Javascript | HTML </sub></p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="container_right">
-                                    <div class="project_text">
-                                        <h3>Onboard</h3>
-                                            <p>
-                                                Designed and built in collaboration with a large financial services business, Onboard is a powerful web application for the better training and tracking of new employees.
-                                                It was built to modernise their outdated, spreadsheet driven enrollment processes and allow senior managers better visibility across the whole workforce. All this data is brought together to make predictions on the success of a particular individual, their graduation date and where they sit in relation to their peers.
-                                                <br>
-                                                <br>
-                                                Built in Python on the Flask Framework, Onboard uses a SQLite3 database to manage logins performance tracking across multiple tiers and all the pathway data associated.
-                                            </p>
-                                            <p><sub>Python | SQLite3 | Flask | Javascript | HTML </sub></p>
+                            </li>
+                            <li class="glide__slide">                                
+                                <div class="slider_container">
+                                    <div class="container_left">
+                                        <img alt="Skill screengrab" src="images/skill_screengrab.png">
+                                        <div style="display: flex">
+                                            <a class="button_light" rel="noreferrer" target="_blank" href="https://skll.herokuapp.com/">Visit Live</a>
+                                            <a class="button_light" rel="noreferrer" target="_blank" href="https://github.com/johnchaigh/skll">View Code</a>
+                                        </div>
+                                    </div>
+                                    <div class="container_right">
+                                        <div class="project_text">
+                                            <h3>Skll</h3>
+                                                <p>
+                                                    This was a personal project to solve a problem I was having when making job applications. 
+                                                    Recruiters are increasingly using applicant tracking programmes to judge suitability and filter out many cv's before a human ever gets to see them.
+                                                    CV's can fail on incorrect formatting or missing keywords, so this web application runs your cv text against the job application and makes suggestions on what you can include to make it perform better.
+                                                    <br>
+                                                    <br>
+                                                    The backend uses Python NLP module 'Spacy' to parse the text and pickout words from a large skills library stored in the SQLite3 database. There is a login option where you can store your cv information and even search for local jobs based on the skills in your profile.
+                                                </p>
+                                                <p><sub>NLP | Python | SQLite3 | Flask | Javascript | HTML </sub></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="glide__slide">                                
-                            <div class="slider_container">
-                                <div class="container_left">
-                                    <img src="images/skill_screengrab.png">
-                                    <div style="display: flex">
-                                        <a class="button_light" rel="noreferrer" href="">Visit Live</a>
-                                        <a class="button_light" rel="noreferrer" target="_blank" href="https://github.com/johnchaigh/skll">View Code</a>
-                                    </div>
-                                </div>
-                                <div class="container_right">
-                                    <div class="project_text">
-                                        <h3>Skll</h3>
-                                            <p>
-                                                This was a personal project to solve a problem I was having when making job applications. 
-                                                Recruiters are increasingly using applicant tracking programmes to judge suitability and filter out many cv's before a human ever gets to see them.
-                                                CV's can fail on incorrect formatting or missing keywords, so this web application runs your cv text against the job application and makes suggestions on what you can include to make it perform better.
-                                                <br>
-                                                <br>
-                                                The backend uses Python NLP module 'Spacy' to parse the text and pickout words from a large skills library stored in the SQLite3 database. There is a login option where you can store your cv information and even search for local jobs based on the skills in your profile.
-                                            </p>
-                                            <p><sub>NLP | Python | SQLite3 | Flask | Javascript | HTML </sub></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li><li class="glide__slide">                                
-                            <div class="slider_container">
-                                <div class="container_left">
-                                    <img src="images/skill_screengrab.png">
-                                    <div style="display: flex">
-                                        <button class="button_light">View Live</button>
-                                        <button class="button_light">View Code</button>
-                                    </div>
-                                </div>
-                                <div class="container_right">
-                                    <div class="project_text">
-                                        <h3>Onboard</h3>
-                                            <p>
-                                                Designed and built in collaboration with a large financial services business, Onboard is a powerful web application for the better training and tracking of new employees.
-                                                It was built to modernise their outdated, spreadsheet driven enrollment processes and allow senior managers better visibility across the whole workforce. All this data is brought together to make predictions on the success of a particular individual, their graduation date and where they sit in relation to their peers.
-                                                <br>
-                                                <br>
-                                                Built in Python on the Flask Framework, Onboard uses a SQLite3 database to manage logins performance tracking across multiple tiers and all the pathway data associated.
-                                            </p>
-                                            <p><sub>Python | SQLite3 | Flask | Javascript | HTML </sub></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="glide">                  
+                        <div class="glide__arrows" data-glide-el="controls" style="text-align: center; padding-top: 45px">
+                            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">Previous Project</button>
+                            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">Next Project</button>
+                        </div>
+                    </div>
+                    <div class="glide">
+                        <div class="glide__bullets" data-glide-el="controls[nav]" style="text-align: center;">
+                            <button class="glide__bullet" data-glide-dir="=0"></button>
+                            <button class="glide__bullet" data-glide-dir="=1"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="myModal" class="modal">
+            <div id="myModal" class="about_me">
+                <div style="height: 100%; overflow: hidden;" class="container_left">
+                    <img alt="Profile picture" src="images/profile_pic.jpeg">
+                </div>
+                <div class="container_right">
+                    <h4>About Me</h4>
+                    <p>Hi I'm John!
+
+                        Based in the South-West of England, I'm a latecomer to the world of software development after working for many years in design and operations for many international events programmes.
+                        <br><br>
+                        During the quiet periods over the recent lockdowns, I committed my time fully to learning software development. I started in C with HarvardX's CS50, learning the basics of data types, image manipulation and algorithms before moving into Python and beyond.
+                        <br><br>
+                        This was a great foundation to start building my own solutions and develop my learning further, but I was missing knowledge of professional working practices. Proper source code control, project management methodologies and the roles of each person in the team during the lifecycle. I enrolled in a course to fill the gap at Exeter College and now I feel ready to start breaking into the profession and start really learning.
+                        <br><br>
+                        Please reach out if you have any feedback or want to speak about anything further.</p>
+                    <p style="text-align: center;">Qualifications and training:</p>
+                    <ul>
+                        <li>BA(Hons) Graphic Design - Central St Martins School of Art and Design, London</li>
+                        <li>CS50 Introduction to Computer Science - HarvardX</li>
+                        <li>Software Development (12-week part-time bootcamp) - Exeter College</li>
                     </ul>
                 </div>
-                <div class="glide">                  
-                    <div class="glide__arrows" data-glide-el="controls" style="text-align: center; padding-top: 45px">
-                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">Previous Project</button>
-                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">Next Project</button>
-                    </div>
-                </div>
-                <div class="glide">
-                    <div class="glide__bullets" data-glide-el="controls[nav]" style="text-align: center;">
-                        <button class="glide__bullet" data-glide-dir="=0"></button>
-                        <button class="glide__bullet" data-glide-dir="=1"></button>
-                        <button class="glide__bullet" data-glide-dir="=2"></button>
-                        <button class="glide__bullet" data-glide-dir="=3"></button>
-                    </div>
-                </div>
+                
+                <span class="close">&times;</span>
             </div>
         </div>
-    </div>
-    <div id="myModal" class="modal">
-        <div id="myModal" class="about_me">
-            <div style="height: 100%; overflow: hidden;" class="container_left">
-                <img src="images/profile_pic.jpeg">
-            </div>
-            <div class="container_right">
-                <h4>About Me</h4>
-                <p>Hi I'm John!
-
-                    Based in the South-West of England, I'm a latecomer to the world of software development after working for many years in design and operations for many international events programmes.
-                    <br><br>
-                    During the quiet periods over the recent lockdowns, I committed my time fully to learning software development. I started in C with HarvardX's CS50, learning the basics of data types, image manipulation and algorithms before moving into Python and beyond.
-                    <br><br>
-                    This was a great foundation to start building my own solutions and develop my learning further, but I was missing knowledge of professional working practices. Proper source code control, project management methodologies and the roles of each person in the team during the lifecycle. I enrolled in a course to fill the gap at Exeter College and now I feel ready to start breaking into the profession and start really learning.
-                    <br><br>
-                    Please reach out if you have any feedback or want to speak about anything further.</p>
-                <p style="text-align: center;">Qualifications and training:</p>
-                <ul>
-                    <li>BA(Hons) Graphic Design - Central St Martins School of Art and Design, London</li>
-                    <li>CS50 Introduction to Computer Science - HarvardX</li>
-                    <li>Software Development (12-week part-time bootcamp) - Exeter College</li>
-                </ul>
-            </div>
-            
-            <span class="close">&times;</span>
+        <div class="bottomnav">
+            <a class="bottom_links" rel="noreferrer" href="tel:+447512634536"><img alt="Telephone icon" src="images/telephone-handle-silhouette.png"></a>
+            <a class="bottom_links" rel="noreferrer" href="mailto:johnhaigh@icloud.com"><img alt="Email icon" src="images/email.png"></a>
+            <button id="myBtn">About Me</button>
+            <a class="bottom_links" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/johncharleshaigh/"><img alt="Linkedin icon" src="images/linkedin.png"></a>
+            <a class="bottom_links" rel="noreferrer" target="_blank" href="https://github.com/johnchaigh/"><img alt="Github icon" src="images/github-sign.png"></a>
         </div>
-    </div>
-    <div class="bottomnav">
-        <a class="bottom_links" href="tel:+447512634536"><img src="images/telephone-handle-silhouette.png"></a>
-        <a class="bottom_links" href="mailto:johnhaigh@icloud.com"><img src="images/email.png"></a>
-        <button id="myBtn">About Me</button>
-        <a class="bottom_links" target="_blank" href="https://www.linkedin.com/in/johncharleshaigh/"><img src="images/linkedin.png"></a>
-        <a class="bottom_links" target="_blank" href="https://github.com/johnchaigh/"><img src="images/github-sign.png"></a>
-    </div>
-<script>
-        // Get the modal
-    var modal = document.getElementById("myModal");
+        <script>
+                // Get the modal
+            var modal = document.getElementById("myModal");
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
 
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-    modal.style.display = "block";
-    }
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+            modal.style.display = "block";
+            }
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-    modal.style.display = "none";
-    }
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-    }
-    new Glide('.glide').mount()
-</script>
-</body>
-
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+            new Glide('.glide').mount()
+        </script>
+    </body>
+</html>
 

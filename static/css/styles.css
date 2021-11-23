@@ -343,3 +343,12 @@ a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  @media only screen and (max-width: 900px) { //Set desired width to call 'mobile'
+    .body {
+      flex-flow: row wrap;
+      width: 40%;
+      height: 100vh; //Whatever you want again
+    }
+  
+  }
