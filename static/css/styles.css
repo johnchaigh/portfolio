@@ -258,7 +258,7 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-.about_me li {
+.abo?ut_me li {
     font-weight: 200;
     font-size: 0.7em;
     padding-left: 40px;
@@ -533,7 +533,7 @@ a {
     }
     .slider_container p {
       color: white;
-      font-size: .8em;
+      font-size: .7em;
       font-weight: 200;    
       line-height: 1.2em;
       padding-left: 5%;
@@ -612,7 +612,7 @@ a {
 
 .glide__bullet_desktop {
   z-index: 0;
-  padding-top: 40px;
+  padding: 5%;
 }
     .modal {
       display: none; 
