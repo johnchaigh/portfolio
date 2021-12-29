@@ -14,6 +14,9 @@
         #FF461A
     );
 }
+html{
+  overflow: clip;
+}
 
 body {
     background-image: var(--gradient1);
@@ -33,6 +36,89 @@ body {
       to   { opacity: 1; }
   }
 
+@media only screen and (min-width: 800px) {
+
+
+  .bottomnav {
+    height: 120px;
+    width: 65%;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 17.5%;
+    overflow-y: hidden;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.glide_arrow_button_left {
+  border-style: none;
+  background: none;color: white;
+  font-size: 2em;
+  cursor: pointer;
+  padding-right: 15vw;
+}
+
+.glide_arrow_button_right{
+  border-style: none;
+  padding: 20px;
+  background: none;color: white;
+  font-size: 2em;
+  cursor: pointer;
+  padding-left: 15vw;
+}
+
+.bottomnav p {
+    text-align: center;
+    color: white;
+    transition: width .5s;
+}
+
+.bottomnav img {
+    width: 15px;
+    transition: width 1s;
+    cursor: pointer;
+}
+
+.bottom_links {
+    width: 15px;
+    background: none;
+    transition: width 1s;
+    border-style: none;
+}
+.bottomnav button {
+    padding: 10px 25px;
+    background: none;
+    border-style: solid;
+    border-color: white;
+    text-transform: uppercase;
+    border-width: 1px;
+    color:white;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 0.5em;
+    transition: 0.5s;
+}
+
+.bottomnav button:hover {
+  background-color: rgba(255, 255, 255, 0.788);
+  color: black;
+}
+
+.bottom_links:hover {
+    width: 30px;
+    background: none;
+}
+.bottomnav img:hover {
+    width: 30px;
+    background: none;
+}
+
+.bottomnav p:hover {
+    text-decoration: underline;
+}
 
 .homepage_button {
     padding: 10px;
@@ -180,7 +266,6 @@ body {
     line-height: 1.8;
     list-style-position: inside
     font-family: 'Raleway', sans-serif;
-
 }
 
 .about_me h4 {
@@ -222,6 +307,12 @@ body {
     padding-bottom: 25px;
   }
 
+  .slider_container_splash {
+    display: flex;
+    text-align: center;
+
+  }
+
   .container_left {
     width: 50%;
     overflow:auto;
@@ -245,6 +336,58 @@ a {
     transition: 0.5s;
 }
 
+.slide_nav_button {
+  padding: 10px 25px;
+  background: none;
+  border-style: solid;
+  border-color: white;
+  text-transform: uppercase;
+  border-width: 1px;
+  color:white;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 0.5em;
+  transition: 0.5s;
+}
+
+.glide_arrow_left {
+  padding: 10px 25px;
+  background: none;
+  border-style: solid;
+  border-color: white;
+  text-transform: uppercase;
+  border-width: 1px;
+  color:white;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 0.5em;
+  transition: 0.5s;
+  margin-right: 100px;
+  
+}
+
+.glide_arrow_right {
+  padding: 10px 25px;
+  background: none;
+  border-style: solid;
+  border-color: white;
+  text-transform: uppercase;
+  border-width: 1px;
+  color:white;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 0.5em;
+  transition: 0.5s;
+  margin-left: 100px;
+}
+
+.glide_arrow_right :hover {
+  background-color: rgba(255, 255, 255, 0.788);
+  color: black;
+}
+
+
+
   a:hover{
     background-color: rgba(255, 255, 255, 0.788);
     color: black;
@@ -257,6 +400,10 @@ a {
 
   .container_right {
     width: 50%;
+}
+
+.container_right_modal {
+  width: 50%;
 }
 
 .project_text {
@@ -344,11 +491,235 @@ a {
     -webkit-text-fill-color: transparent;
   }
 
-  @media only screen and (max-width: 900px) { //Set desired width to call 'mobile'
-    .body {
-      flex-flow: row wrap;
-      width: 40%;
-      height: 100vh; //Whatever you want again
+  .slider_container_splash {
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+  
+
+  .slider_container_splash h1 {
+    color: rgb(237, 255, 157);
+    line-height: 1.6;
+    font-size: 3em;
+    text-align: left;
+  }
+
+  .slider_container_splash p {
+    color: ivory;
+    text-transform: uppercase;
+    font-size: .8em;
+    padding-top: 30px;
+    text-align: right;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .topnav {
+      color: white;
+      text-align: center;
+      height: 12vh;
+    }
+    .slidenav {
+      width: 96vw;
+      height: 76vh;
+    }
+    .slider_container img{
+      width: 100vw;
+      margin-left: auto;
+      padding-right: auto;
+
+    }
+    .slider_container p {
+      color: white;
+      font-size: .8em;
+      font-weight: 200;    
+      line-height: 1.2em;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    .slider_container h3 {
+      color: white;
+      font-size: 1em;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    a {
+      text-transform: uppercase;
+      width: 50%;
+      background-color: white;
+      background: none;
+      border-width: 1px;
+      border-color: white;
+      border-style: solid;
+      padding: 5px;
+      margin: 0px;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      font-size: 0.7em;
+      transition: 0.5s;
+  }
+
+
+  .bottomnav {
+    height: 12vh;
+    width: 95vw;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bottomnav p {
+    text-align: center;
+    color: white;
+}
+
+.bottomnav img {
+    width: 15px;
+    transition: width 1s;
+    cursor: pointer;
+}
+
+.bottom_links {
+    width: 15px;
+    background: none;
+    transition: width 1s;
+    border-style: none;
+}
+.bottomnav button {
+    padding: 10px 25px;
+    background: none;
+    border-style: solid;
+    border-color: white;
+    text-transform: uppercase;
+    border-width: 1px;
+    color:white;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 0.5em;
+    transition: 0.5s;
+}
+
+.glide_buttons_desktop{
+  display: none;
+}
+
+.glide__bullet_desktop {
+  z-index: 0;
+  padding-top: 40px;
+}
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 2;
+      left: 0;
+      top: 0;
+      width: 100vh;
+      height: 100vh;
+      overflow: scroll;
+      -webkit-animation-name: fadeIn;
+      -webkit-animation-duration: 0.5s;
+      animation-name: fadeIn;
+      animation-duration: 0.5s;
+      background-color: rgba(0, 0, 0, 0.59);
+    }
+
+    .about_me {
+      width: 95%;
+      min-height: 95%;
+      background-color: rgba(255, 255, 255, 0.95);
+      position: absolute;
+      top: 2.5%;
+      left: 2.5%;
+      z-index: 2;
+      -webkit-animation-name: slideIn;
+      -webkit-animation-duration: 0.4s;
+      animation-name: slideIn;
+      animation-duration: 0.4s;
+      display: flex;
+  }
+
+  .about_me img {
+    display:none;
+  }
+  
+  .about_me p {
+      font-weight: 300;
+      font-size: 0.7em;
+      padding-left: 50px;
+      padding-right: 50px;
+      line-height: 1.5;
+      font-family: 'Raleway', sans-serif;
+      text-align: left;
+  }
+  
+  .about_me li {
+      font-weight: 200;
+      font-size: 0.7em;
+      padding-left: 40px;
+      padding-right: 50px;
+      line-height: 1.5;
+      list-style-position: inside
+      font-family: 'Raleway', sans-serif;
+  }
+  
+  .about_me h4 {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.9em;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+    .close {
+      color: #aaa;
+      position: fixed;
+      top: 5%;
+      right:5%;
+      font-size: 28px;
+      font-weight: bold;
+  }
+  
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .container_right_modal {
+      width: 90vw;
+    }
+
+    .slider_container_splash {
+      padding-left: 8vw;
+      padding-right: 8vw;
+    }
+    
+
+    .slider_container_splash h1 {
+      color: rgb(237, 255, 157);
+      line-height: 1.6;
+      font-size: 1.9em;
+
+    }
+
+    .slider_container_splash p {
+      text-align: right;
+      color: ivory;
+      text-transform: uppercase;
+      padding-top: 30px;
+      font-size: .8em;
     }
   
-  }
+
+}
