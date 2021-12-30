@@ -400,6 +400,7 @@ a {
 
   .container_right {
     width: 50%;
+
 }
 
 .container_right_modal {
@@ -415,6 +416,8 @@ a {
     margin: 0;
     font-weight: 300;
     color: var(--colour2);
+    height: 100%;
+    overflow: scroll;
     
 }
 
@@ -545,6 +548,8 @@ a {
       padding-left: 5%;
       padding-right: 5%;
     }
+
+  
 
     a {
       text-transform: uppercase;
@@ -721,5 +726,8 @@ a {
       font-size: .8em;
     }
   
+    .container_right{
+      overflow: scroll;
+    }
 
 }
